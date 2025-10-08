@@ -1,0 +1,172 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000017533caccc0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0000017533cace50 .scope module, "full_sub_tb" "full_sub_tb" 3 2;
+ .timescale -9 -12;
+v0000017533c212b0_0 .var "a", 0 0;
+v0000017533c21490_0 .var "b", 0 0;
+v0000017533c20f90_0 .var "bin", 0 0;
+v0000017533c213f0_0 .net "bout_bh", 0 0, v0000017533bbd5f0_0;  1 drivers
+v0000017533c1fd70_0 .net "bout_df", 0 0, L_0000017533c22100;  1 drivers
+v0000017533c21710_0 .net "bout_st", 0 0, L_0000017533c22480;  1 drivers
+v0000017533c1feb0_0 .net "diff_bh", 0 0, v0000017533bbd910_0;  1 drivers
+v0000017533c20590_0 .net "diff_df", 0 0, L_0000017533bcd8d0;  1 drivers
+v0000017533c1faf0_0 .net "diff_st", 0 0, L_0000017533c21fb0;  1 drivers
+v0000017533c21350_0 .var/i "i", 31 0;
+S_0000017533bc9bb0 .scope module, "u1" "full_sub_df" 3 10, 4 1 0, S_0000017533cace50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "bin";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "bout";
+L_0000017533bcd860 .functor XOR 1, v0000017533c212b0_0, v0000017533c21490_0, C4<0>, C4<0>;
+L_0000017533bcd8d0 .functor XOR 1, L_0000017533bcd860, v0000017533c20f90_0, C4<0>, C4<0>;
+L_0000017533c21e60 .functor NOT 1, v0000017533c212b0_0, C4<0>, C4<0>, C4<0>;
+L_0000017533c21990 .functor AND 1, L_0000017533c21e60, v0000017533c21490_0, C4<1>, C4<1>;
+L_0000017533c222c0 .functor XOR 1, v0000017533c212b0_0, v0000017533c21490_0, C4<0>, C4<0>;
+L_0000017533c22090 .functor NOT 1, L_0000017533c222c0, C4<0>, C4<0>, C4<0>;
+L_0000017533c226b0 .functor AND 1, L_0000017533c22090, v0000017533c20f90_0, C4<1>, C4<1>;
+L_0000017533c22100 .functor OR 1, L_0000017533c21990, L_0000017533c226b0, C4<0>, C4<0>;
+v0000017533bbde10_0 .net *"_ivl_0", 0 0, L_0000017533bcd860;  1 drivers
+v0000017533bbd7d0_0 .net *"_ivl_10", 0 0, L_0000017533c22090;  1 drivers
+v0000017533bbe4f0_0 .net *"_ivl_12", 0 0, L_0000017533c226b0;  1 drivers
+v0000017533bbdeb0_0 .net *"_ivl_4", 0 0, L_0000017533c21e60;  1 drivers
+v0000017533bbdc30_0 .net *"_ivl_6", 0 0, L_0000017533c21990;  1 drivers
+v0000017533bbe3b0_0 .net *"_ivl_8", 0 0, L_0000017533c222c0;  1 drivers
+v0000017533bbe1d0_0 .net "a", 0 0, v0000017533c212b0_0;  1 drivers
+v0000017533bbd730_0 .net "b", 0 0, v0000017533c21490_0;  1 drivers
+v0000017533bbe450_0 .net "bin", 0 0, v0000017533c20f90_0;  1 drivers
+v0000017533bbe270_0 .net "bout", 0 0, L_0000017533c22100;  alias, 1 drivers
+v0000017533bbdf50_0 .net "diff", 0 0, L_0000017533bcd8d0;  alias, 1 drivers
+S_0000017533bc9d40 .scope module, "u2" "full_sub_bh" 3 11, 5 1 0, S_0000017533cace50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "bin";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "bout";
+v0000017533bbdaf0_0 .net "a", 0 0, v0000017533c212b0_0;  alias, 1 drivers
+v0000017533bbdff0_0 .net "b", 0 0, v0000017533c21490_0;  alias, 1 drivers
+v0000017533bbe310_0 .net "bin", 0 0, v0000017533c20f90_0;  alias, 1 drivers
+v0000017533bbd5f0_0 .var "bout", 0 0;
+v0000017533bbd910_0 .var "diff", 0 0;
+E_0000017533bbc300 .event anyedge, v0000017533bbe1d0_0, v0000017533bbd730_0, v0000017533bbe450_0;
+S_0000017533bbf1c0 .scope module, "u3" "full_sub_st" 3 12, 6 11 0, S_0000017533cace50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "bin";
+    .port_info 3 /OUTPUT 1 "diff";
+    .port_info 4 /OUTPUT 1 "bout";
+L_0000017533c21fb0 .functor BUFZ 1, L_0000017533c22800, C4<0>, C4<0>, C4<0>;
+L_0000017533c22480 .functor OR 1, L_0000017533c22020, L_0000017533c22330, C4<0>, C4<0>;
+v0000017533c1f910_0 .net "a", 0 0, v0000017533c212b0_0;  alias, 1 drivers
+v0000017533c21670_0 .net "b", 0 0, v0000017533c21490_0;  alias, 1 drivers
+v0000017533c21210_0 .net "b1", 0 0, L_0000017533c22020;  1 drivers
+v0000017533c217b0_0 .net "b2", 0 0, L_0000017533c22330;  1 drivers
+v0000017533c203b0_0 .net "bin", 0 0, v0000017533c20f90_0;  alias, 1 drivers
+v0000017533c1fc30_0 .net "bout", 0 0, L_0000017533c22480;  alias, 1 drivers
+v0000017533c20450_0 .net "d1", 0 0, L_0000017533c21f40;  1 drivers
+v0000017533c204f0_0 .net "d2", 0 0, L_0000017533c22800;  1 drivers
+v0000017533c1f9b0_0 .net "diff", 0 0, L_0000017533c21fb0;  alias, 1 drivers
+S_0000017533bbf350 .scope module, "hs1" "half_sub" 6 17, 6 2 0, S_0000017533bbf1c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "diff";
+    .port_info 3 /OUTPUT 1 "borrow";
+L_0000017533c21f40 .functor XOR 1, v0000017533c212b0_0, v0000017533c21490_0, C4<0>, C4<0>;
+L_0000017533c21bc0 .functor NOT 1, v0000017533c212b0_0, C4<0>, C4<0>, C4<0>;
+L_0000017533c22020 .functor AND 1, L_0000017533c21bc0, v0000017533c21490_0, C4<1>, C4<1>;
+v0000017533bbe090_0 .net *"_ivl_2", 0 0, L_0000017533c21bc0;  1 drivers
+v0000017533bbdb90_0 .net "a", 0 0, v0000017533c212b0_0;  alias, 1 drivers
+v0000017533bbe130_0 .net "b", 0 0, v0000017533c21490_0;  alias, 1 drivers
+v0000017533bbd870_0 .net "borrow", 0 0, L_0000017533c22020;  alias, 1 drivers
+v0000017533bbd690_0 .net "diff", 0 0, L_0000017533c21f40;  alias, 1 drivers
+S_0000017533bc6540 .scope module, "hs2" "half_sub" 6 18, 6 2 0, S_0000017533bbf1c0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "diff";
+    .port_info 3 /OUTPUT 1 "borrow";
+L_0000017533c22800 .functor XOR 1, L_0000017533c21f40, v0000017533c20f90_0, C4<0>, C4<0>;
+L_0000017533c22250 .functor NOT 1, L_0000017533c21f40, C4<0>, C4<0>, C4<0>;
+L_0000017533c22330 .functor AND 1, L_0000017533c22250, v0000017533c20f90_0, C4<1>, C4<1>;
+v0000017533bbdcd0_0 .net *"_ivl_2", 0 0, L_0000017533c22250;  1 drivers
+v0000017533bbd9b0_0 .net "a", 0 0, L_0000017533c21f40;  alias, 1 drivers
+v0000017533bbda50_0 .net "b", 0 0, v0000017533c20f90_0;  alias, 1 drivers
+v0000017533bbdd70_0 .net "borrow", 0 0, L_0000017533c22330;  alias, 1 drivers
+v0000017533c1fa50_0 .net "diff", 0 0, L_0000017533c22800;  alias, 1 drivers
+    .scope S_0000017533bc9d40;
+T_0 ;
+Ewait_0 .event/or E_0000017533bbc300, E_0x0;
+    %wait Ewait_0;
+    %load/vec4 v0000017533bbdaf0_0;
+    %load/vec4 v0000017533bbdff0_0;
+    %xor;
+    %load/vec4 v0000017533bbe310_0;
+    %xor;
+    %store/vec4 v0000017533bbd910_0, 0, 1;
+    %load/vec4 v0000017533bbdaf0_0;
+    %inv;
+    %load/vec4 v0000017533bbdff0_0;
+    %and;
+    %load/vec4 v0000017533bbdaf0_0;
+    %load/vec4 v0000017533bbdff0_0;
+    %xor;
+    %inv;
+    %load/vec4 v0000017533bbe310_0;
+    %and;
+    %or;
+    %store/vec4 v0000017533bbd5f0_0, 0, 1;
+    %jmp T_0;
+    .thread T_0, $push;
+    .scope S_0000017533cace50;
+T_1 ;
+    %vpi_call/w 3 15 "$dumpfile", "full_sub_tb.vcd" {0 0 0};
+    %vpi_call/w 3 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000017533cace50 {0 0 0};
+    %vpi_call/w 3 17 "$display", "Testing Full Subtractor" {0 0 0};
+    %vpi_call/w 3 19 "$monitor", "t=%0t | a=%b b=%b bin=%b | DF: diff=%b bout=%b | BH: diff=%b bout=%b | ST: diff=%b bout=%b", $time, v0000017533c212b0_0, v0000017533c21490_0, v0000017533c20f90_0, v0000017533c20590_0, v0000017533c1fd70_0, v0000017533c1feb0_0, v0000017533c213f0_0, v0000017533c1faf0_0, v0000017533c21710_0 {0 0 0};
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000017533c21350_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v0000017533c21350_0;
+    %cmpi/s 8, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %load/vec4 v0000017533c21350_0;
+    %pad/s 3;
+    %split/vec4 1;
+    %store/vec4 v0000017533c20f90_0, 0, 1;
+    %split/vec4 1;
+    %store/vec4 v0000017533c21490_0, 0, 1;
+    %store/vec4 v0000017533c212b0_0, 0, 1;
+    %delay 10000, 0;
+    ; show_stmt_assign_vector: Get l-value for compressed += operand
+    %load/vec4 v0000017533c21350_0;
+    %pushi/vec4 1, 0, 32;
+    %add;
+    %store/vec4 v0000017533c21350_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %vpi_call/w 3 27 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 7;
+    "N/A";
+    "<interactive>";
+    "-";
+    "full_sub_tb.v";
+    "full_sub_df.v";
+    "full_sub_bh.v";
+    "full_sub_st.v";
