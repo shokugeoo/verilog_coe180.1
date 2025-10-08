@@ -1,0 +1,142 @@
+$date
+	Tue Sep 23 19:45:24 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module full_adder_tb $end
+$var wire 1 ! sum_st $end
+$var wire 1 " sum_df $end
+$var wire 1 # sum_bh $end
+$var wire 1 $ cout_st $end
+$var wire 1 % cout_df $end
+$var wire 1 & cout_bh $end
+$var reg 1 ' a $end
+$var reg 1 ( b $end
+$var reg 1 ) cin $end
+$scope module bh $end
+$var wire 1 ' a $end
+$var wire 1 ( b $end
+$var wire 1 ) cin $end
+$var reg 1 & cout $end
+$var reg 1 # sum $end
+$upscope $end
+$scope module df $end
+$var wire 1 ' a $end
+$var wire 1 ( b $end
+$var wire 1 ) cin $end
+$var wire 1 % cout $end
+$var wire 1 " sum $end
+$upscope $end
+$scope module st $end
+$var wire 1 ' a $end
+$var wire 1 ( b $end
+$var wire 1 ) cin $end
+$var wire 1 $ cout $end
+$var wire 1 * sum1 $end
+$var wire 1 ! sum $end
+$var wire 1 + carry2 $end
+$var wire 1 , carry1 $end
+$scope module ha1 $end
+$var wire 1 ' a $end
+$var wire 1 ( b $end
+$var wire 1 , carry $end
+$var wire 1 * sum $end
+$upscope $end
+$scope module ha2 $end
+$var wire 1 * a $end
+$var wire 1 ) b $end
+$var wire 1 + carry $end
+$var wire 1 ! sum $end
+$upscope $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 - i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 -
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10000
+1#
+1"
+1!
+1)
+b1 -
+#20000
+1*
+1"
+1!
+1(
+0)
+b10 -
+#30000
+1%
+1$
+1&
+0#
+0"
+0!
+1+
+1)
+b11 -
+#40000
+0%
+0$
+0&
+1#
+1"
+1!
+0+
+1'
+0(
+0)
+b100 -
+#50000
+1%
+1$
+1&
+0#
+0"
+0!
+1+
+1)
+b101 -
+#60000
+1%
+0*
+1,
+0"
+0!
+0+
+1(
+0)
+b110 -
+#70000
+1#
+1"
+1!
+1)
+b111 -
+#80000
+b1000 -
